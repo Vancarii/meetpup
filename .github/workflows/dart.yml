@@ -22,6 +22,7 @@ jobs:
       - uses: subosito/flutter-action@4efee115f1f8f612aafcb187ee16db202d7e4376
         with:
           channel: stable
+          flutter-version: '2.10.5'
 
       - name: Install dependencies
         run: flutter pub get
@@ -36,7 +37,5 @@ jobs:
         run: flutter analyze
         continue-on-error: true
 
-      - name: Run tests (unsound null-safety for legacy code)
-        # TODO: Remove continue-on-error after null-safety migration is complete.
+      - name: Run tests (legacy unsound null-safety)
         run: flutter test --no-sound-null-safety
-        continue-on-error: true

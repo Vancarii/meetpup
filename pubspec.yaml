@@ -6,7 +6,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
+  # Legacy, pre-null-safety language version to keep existing code compiling on Flutter 2.x
+  sdk: '>=2.7.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -91,4 +92,3 @@ flutter:
       - asset: assets/fonts/archivo/Archivo-BoldItalic.ttf
         style: italic
         weight: 700
-
