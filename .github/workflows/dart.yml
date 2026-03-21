@@ -32,6 +32,7 @@ jobs:
 
       # Consider passing '--fatal-infos' for slightly stricter analysis.
       - name: Analyze project source (non-blocking until migration)
+        # TODO: Remove continue-on-error after null-safety migration is complete.
         run: flutter analyze
         continue-on-error: true
 
