@@ -12,7 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   testWidgets('App renders root MaterialApp', (WidgetTester tester) async {
     await tester.pumpWidget(DogMeetApp());
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
 
     expect(find.byType(MaterialApp), findsOneWidget);
   });
